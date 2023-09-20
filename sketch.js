@@ -1,6 +1,10 @@
 var myParagraph;
+var myImage;
+var button;
 
 function setup() {
+   myImage = createImg('https://i.pinimg.com/originals/bb/12/03/bb12038681429c0e313c3001a973ef0f.jpg');
+  myImage.position(100, 100);
   myParagraph = createP("html");
   myParagraph.position(0, 0);
   myParagraph.mouseClicked(makeRed);
