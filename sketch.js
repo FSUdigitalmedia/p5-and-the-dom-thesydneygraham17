@@ -53,11 +53,15 @@ function makeRed() {
 
 Some Questions:
 0. What is this percent sign all about? (hint: it's "modulus")
+It's called the modulus, it gives you the remainder of the frame count divided by 200, which makes it loop.
 1. Where, in the p5 reference, do we find all this DOM stuff?
+It is under the HTML elements.
 2. Why is the text so large when it's just a "paragraph"?
+It is big because of the code 'new size', which makes it so the size of the font is determined by where the slider is.
 3. "color" and "red"? Where did those come from and where 
    could you find more style attributes that could be
    changed?
+   Color and red came from CSS, where the font also came from, which means style.css is used for style changes.
 
 Some Things to Try:
 0. Make the text follow the mouse pointer
