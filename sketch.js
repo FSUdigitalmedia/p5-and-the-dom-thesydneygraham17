@@ -5,12 +5,15 @@ function setup() {
   myParagraph.position(0, 0);
   myParagraph.mouseClicked(makeRed);
   button = createButton('click me');
-  button.position(0, 0);
- 
+  button.position(0,0);
+  button.mousePressed(changeParagraph);
 }
-
+function changeParagraph(){
+   myParagraph.html("you clicked the button");
+}
 function draw() {
   myParagraph.position(mouseX, mouseY);
+  
 }
 
 function makeRed() {
