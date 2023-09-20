@@ -18,6 +18,7 @@ function setup() {
   textSizeSlider.position(20, height - 200);
   textSizeSlider.addClass("custom-slider"); 
   textSizeSlider.input(updateTextSize);
+  myImage.doubleClicked(hideText); 
 }
 function buttonClickHandler() {
    changeParagraph();
@@ -35,6 +36,9 @@ function updateTextSize() {
    var newSize = textSizeSlider.value();
    myParagraph.style("font-size", newSize + "px");
 }
+function hideText() {
+   myParagraph.style("visibility", "hidden");
+ }
 function draw() {
   myParagraph.position(mouseX, mouseY);
   
