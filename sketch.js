@@ -7,7 +7,7 @@ function setup() {
 }
 
 function draw() {
-  myParagraph.position(frameCount % 200, 0);
+  myParagraph.position(mouseX, mouseY);
 }
 
 function makeRed() {
