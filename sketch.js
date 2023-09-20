@@ -14,8 +14,9 @@ function setup() {
   button = createButton('click me');
   button.position(0,0);
   button.mousePressed(buttonClickHandler);
-  textSizeSlider = createSlider(12, 48, 24); // Create a slider with a range from 12 to 48 and an initial value of 24
-  textSizeSlider.position(20, height - 40); // Position the slider at the bottom-left corner
+  textSizeSlider = createSlider(12, 48, 24);
+  textSizeSlider.position(20, height - 200);
+  textSizeSlider.addClass("custom-slider"); 
   textSizeSlider.input(updateTextSize);
 }
 function buttonClickHandler() {

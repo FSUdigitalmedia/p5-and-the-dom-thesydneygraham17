@@ -1,3 +1,9 @@
+
+.custom-slider {
+  transform: rotate(30deg); 
+  width: 600px; 
+ 
+}
 p {
-  font-size: xx-large;
+  font-size: xxxx-large;
 }
