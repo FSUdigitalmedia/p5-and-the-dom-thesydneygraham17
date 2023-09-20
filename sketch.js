@@ -1,8 +1,10 @@
 var myParagraph;
 var myImage;
 var button;
+var textSizeSlider;
 
 function setup() {
+   createCanvas(1250, 600);
    myImage = createImg('https://i.pinimg.com/originals/bb/12/03/bb12038681429c0e313c3001a973ef0f.jpg');
   myImage.position(100, 100);
   myImage.size(200, 150);
@@ -12,6 +14,9 @@ function setup() {
   button = createButton('click me');
   button.position(0,0);
   button.mousePressed(buttonClickHandler);
+  textSizeSlider = createSlider(12, 48, 24); // Create a slider with a range from 12 to 48 and an initial value of 24
+  textSizeSlider.position(20, height - 40); // Position the slider at the bottom-left corner
+  textSizeSlider.input(updateTextSize);
 }
 function buttonClickHandler() {
    changeParagraph();
@@ -24,6 +29,10 @@ function changeImagePosition() {
    var newX = random(width); 
    var newY = random(height); 
    myImage.position(newX, newY);
+}
+function updateTextSize() {
+   var newSize = textSizeSlider.value();
+   myParagraph.style("font-size", newSize + "px");
 }
 function draw() {
   myParagraph.position(mouseX, mouseY);
