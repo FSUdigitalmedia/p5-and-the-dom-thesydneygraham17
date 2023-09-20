@@ -4,6 +4,9 @@ function setup() {
   myParagraph = createP("html");
   myParagraph.position(0, 0);
   myParagraph.mouseClicked(makeRed);
+  button = createButton('click me');
+  button.position(0, 0);
+ 
 }
 
 function draw() {
