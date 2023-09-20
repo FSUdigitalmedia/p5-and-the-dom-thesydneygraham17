@@ -5,15 +5,25 @@ var button;
 function setup() {
    myImage = createImg('https://i.pinimg.com/originals/bb/12/03/bb12038681429c0e313c3001a973ef0f.jpg');
   myImage.position(100, 100);
+  myImage.size(200, 150);
   myParagraph = createP("html");
   myParagraph.position(0, 0);
   myParagraph.mouseClicked(makeRed);
   button = createButton('click me');
   button.position(0,0);
-  button.mousePressed(changeParagraph);
+  button.mousePressed(buttonClickHandler);
+}
+function buttonClickHandler() {
+   changeParagraph();
+   changeImagePosition();
 }
 function changeParagraph(){
    myParagraph.html("you clicked the button");
+}
+function changeImagePosition() {
+   var newX = random(width); 
+   var newY = random(height); 
+   myImage.position(newX, newY);
 }
 function draw() {
   myParagraph.position(mouseX, mouseY);
@@ -23,6 +33,7 @@ function draw() {
 function makeRed() {
   myParagraph.style("color", "red");
 }
+
 
 /*
 
